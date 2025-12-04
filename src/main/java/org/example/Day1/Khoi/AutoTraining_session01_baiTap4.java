@@ -16,6 +16,13 @@ public class AutoTraining_session01_baiTap4 {
         return arr2D;
     }
 
+    public static  void xuatMang(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.println(arr[i][j]);
+            }
+        }
+    }
     public static void xuatMang2Chieu(int[][] arr2D){
         for (int[] r : arr2D){
             for (int c : r){
@@ -53,8 +60,8 @@ public class AutoTraining_session01_baiTap4 {
         int i = 0;
 
         for (int column = 0; column < columnCount; column++){
-            for (int row = 0; row < arr2D.length; row++){
-                sumColumn += arr2D[row][column];
+            for (int[] ints : arr2D) {
+                sumColumn += ints[column];
             }
             System.out.println("Tổng giá trị cột " + ++i + ": " + sumColumn);
             sumColumn = 0;
@@ -81,19 +88,27 @@ public class AutoTraining_session01_baiTap4 {
 
         int row = 0;
         int column = 0;
-        int[][] arr2D;
+        int[][] arr2D = new int[2][3];
+        arr2D[0][0] = 1;
+        arr2D[0][1] = 3;
+        arr2D[0][2] = 3;
+        arr2D[1][0] = 4;
+        arr2D[1][1] = 5;
+        arr2D[1][2] = 6;
+
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Nhập số hàng cho mảng 2 chiều");
-        row = sc.nextInt();
-        System.out.println("Nhập số cột cho mảng 2 chiều");
-        column = sc.nextInt();
+//        System.out.println("Nhập số hàng cho mảng 2 chiều");
+//        row = sc.nextInt();
+//        System.out.println("Nhập số cột cho mảng 2 chiều");
+//        column = sc.nextInt();
 
-        arr2D = nhapMang2Chieu(row, column);
+//        arr2D = nhapMang2Chieu(row, column);
         xuatMang2Chieu(arr2D);
+        xuatMang(arr2D);
 
-        System.out.println("Tổng giá trị mảng 2 chiều: " + sumAll(arr2D));
+        System.out.println("Tổng    giá trị mảng 2 chiều: " + sumAll(arr2D));
 
         sumAllByRow(arr2D);
 

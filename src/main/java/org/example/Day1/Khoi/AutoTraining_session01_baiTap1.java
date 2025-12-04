@@ -52,21 +52,21 @@ public class AutoTraining_session01_baiTap1 {
 
     public static void main(String[] args){
 
-        double[] diemHS = {5.5, 4.9, 9, 1, 8};
+        double[] scores = {5.5, 4.9, 9, 1, 8};
 
-        double dtb = diemTrungBinh(diemHS);
+        double dtb = diemTrungBinh(scores);
         System.out.println("Điểm trung bình = " + dtb);
 
-        double max = timDiemMax(diemHS);
+        double max = timDiemMax(scores);
         System.out.println("Điểm cao nhất = " + max);
 
-        double min = timDiemMin(diemHS);
+        double min = timDiemMin(scores);
         System.out.println("Điểm thấp nhất = " + min);
 
-        int count = demHsPass(diemHS);
+        int count = demHsPass(scores);
         System.out.println("Số lượng HS đạt: " + count);
 
-        count = demHsFail(diemHS);
+        count = demHsFail(scores);
         System.out.println("Số lượng HS không đạt: " + count);
     }
 
